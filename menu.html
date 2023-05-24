@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        header {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center; */
+            position: absolute;
+            width: 100%;
+            
+        }
+        header.opened{
+            height: 250px;
+            transition: 1s;
+        } 
+        .logo {
+            display: block;
+            width: 150px;
+            height: 50px;
+            background-color: red;
+        }
+
+        nav {
+            width: 100%;
+        }
+        nav > ul {
+            display: flex;
+        }
+
+        nav > ul > li >a{
+            display: block;
+            padding: 16px;
+        }
+
+        .inner-menu {
+            display: none;
+            padding-left: 16px;
+            position: absolute;
+        }
+        a:hover + .inner-menu {
+            display: block;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            height: 53px;
+        }
+
+
+        .lang-container {
+            display: flex;
+            gap: 8px;
+        }
+        .hwasalpyo {
+            transform: translateY(8px);
+            transform-origin: center 8px;
+        }
+
+        .lang-container:hover .hwasalpyo {
+            transform: rotate(180deg);
+        }
+
+        
+
+        .hwasalpyo::after {
+            display: block;
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid #232323;
+            border-right: 2px solid #232323;
+            transform: rotate(-45deg);
+        }
+
+        .lang-container:hover > .hwasalpyo::after {
+            border-color: greenyellow;
+        }
+
+        section {
+            padding-top: 53px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"></a>
+        <nav>
+            <ul>
+                <li class="outter-list">
+                    <a>menu1</a>
+                    <ul class="inner-menu">
+                        <li>inner-menu1</li>
+                        <li>inner-menu2</li>
+                        <li>inner-menu3</li>
+                        <li>inner-menu4</li>
+                    </ul>
+                </li>
+                <li class="outter-list">
+                    <a>menu2</a>
+                    <ul class="inner-menu">
+                        <li>inner-menu1</li>
+                        <li>inner-menu2</li>
+                        <li>inner-menu3</li>
+                        <li>inner-menu4</li>
+                    </ul>
+                </li>
+                <li class="outter-list">
+                    <a>menu3</a>
+                    <ul class="inner-menu">
+                        <li>inner-menu1</li>
+                        <li>inner-menu2</li>
+                        <li>inner-menu3</li>
+                        <li>inner-menu4</li>
+                    </ul>
+                </li>
+                <li class="outter-list">
+                    <a>menu4</a>
+                    <ul class="inner-menu">
+                        <li>inner-menu1</li>
+                        <li>inner-menu2</li>
+                        <li>inner-menu3</li>
+                        <li>inner-menu4</li>
+                    </ul>
+                </li>
+                <li class="outter-list">
+                    <a>menu5</a>
+                    <ul class="inner-menu">
+                        <li>inner-menu1</li>
+                        <li>inner-menu2</li>
+                        <li>inner-menu3</li>
+                        <li>inner-menu4</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="lang-container">햄
+                <span class="hwasalpyo"></span>
+            </div>
+            <button>로</button>
+        </div>
+    </header>
+    <section>이게 보여야함</section>
+    <script>
+
+    </script>
+</body>
+</html>

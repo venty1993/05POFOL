@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 40px;
+            background-color: gray;
+        }
+
+        main {
+            background-color: #343434;
+            /* 임시높이 */
+            height: 4000px;
+        }
+
+        .main-banner-container {
+            position: relative;
+            height: 500px;
+        }
+
+        .main-image.slider {
+            height: 100%;
+        }
+
+        .main-image > .slide {
+            /* width: 자바스크립트로 통제; */
+            background-color: pink;
+            height: 100%;
+        }  
+
+        .main-text.slider {
+            width: 500px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .main-text>.slide {
+            background-color: #00000080;
+            height: 100%;
+        }
+
+        @media screen and (max-width:1200px) {
+            .main-banner-container {
+                height: 400px;
+            }
+            .main-text.slider {
+                width: 300px;
+            }
+        }
+        @media screen and (max-width:767px) {
+            .main-banner-container {
+                height: 700px;
+            }
+            .main-text.slider {
+                width: 100%;
+                height: 300px;
+                top: unset;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="main-banner-container">
+            <ul class="main-image slider">
+                <li class="slide"></li>
+
+            </ul>
+            <ul class="main-text slider">
+                <li class="slide"></li>
+
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
