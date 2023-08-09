@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,12 @@
     <style>
         body {
             background-color: gray;
+
+
+
+
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -25,12 +31,14 @@
             /* align-items: center; */
             position: absolute;
             width: 100%;
-            
+
         }
-        header.opened{
+
+        header.opened {
             height: 250px;
             transition: 1s;
-        } 
+        }
+
         .logo {
             display: block;
             width: 150px;
@@ -41,11 +49,12 @@
         nav {
             width: 100%;
         }
-        nav > ul {
+
+        nav>ul {
             display: flex;
         }
 
-        nav > ul > li >a{
+        nav>ul>li>a {
             display: block;
             padding: 16px;
         }
@@ -55,7 +64,8 @@
             padding-left: 16px;
             position: absolute;
         }
-        a:hover + .inner-menu {
+
+        a:hover+.inner-menu {
             display: block;
         }
 
@@ -71,6 +81,7 @@
             display: flex;
             gap: 8px;
         }
+
         .hwasalpyo {
             transform: translateY(8px);
             transform-origin: center 8px;
@@ -80,7 +91,7 @@
             transform: rotate(180deg);
         }
 
-        
+
 
         .hwasalpyo::after {
             display: block;
@@ -92,7 +103,7 @@
             transform: rotate(-45deg);
         }
 
-        .lang-container:hover > .hwasalpyo::after {
+        .lang-container:hover>.hwasalpyo::after {
             border-color: greenyellow;
         }
 
@@ -101,6 +112,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <a href="#" class="logo"></a>
@@ -165,4 +177,5 @@
 
     </script>
 </body>
+
 </html>
